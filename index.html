@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd7EFOx2O_o6nH3nKy-llWUlIJ_UdYtFr0Pj8whdimfy1EAXQ/formResponse" method="post">
+            <label for="nama-pengirim">Nama Pengirim</label>
+            <input type="text" name="entry.1291446292" id="nama-pengirim" />
+            <br />
+            <label for="kelas-pengirim">kelas Pengirim</label>
+
+            <!-- <input type="text" name="entry.2017503365" id="kelas-pengirim" /> -->
+            <select name="entry.2017503365" id="kelas-pengirim">
+                <option value="X-1">X-1</option>
+                <option value="X-2">X-2</option>
+                <option value="X-3">X-3</option>
+                <option value="X-4">X-4</option>
+                <option value="X-5">X-5</option>
+                <option value="X-6">X-6</option>
+                <option value="X-7">X-7</option>
+                <option value="X-8">X-8</option>
+                <option value="X-9">X-9</option>
+                <option value="XI-1">XI-1</option>
+                <option value="XI-2">XI-2</option>
+                <option value="XI-3">XI-3</option>
+                <option value="XI-4">XI-4</option>
+                <option value="XI-5">XI-5</option>
+                <option value="XI-6">XI-6</option>
+                <option value="XI-7">XI-7</option>
+                <option value="XI-8">XI-8</option>
+                <option value="XI-9">XI-9</option>
+                <option value="XII-1">XII-1</option>
+                <option value="XII-2">XII-2</option>
+                <option value="XII-3">XII-3</option>
+                <option value="XII-4">XII-4</option>
+                <option value="XII-5">XII-5</option>
+                <option value="XII-6">XII-6</option>
+                <option value="XII-7">XII-7</option>
+                <option value="XII-8">XII-8</option>
+            </select>
+            <br />
+            <!-- Paket -->
+            <label for="jumlah-paket-1"> Jumlah Paket 1</label>
+            <input type="number" min="0" max="40" value="0" id="jumlah-paket-1" /> <button onclick="confirmPaket1()">confirm</button>
+
+            <br /><br />
+            <input type="submit" />
+        </form>
+
+        <template id="orang-penerima">
+            <form action="">
+                Nama
+                <input type="text" /><br />
+                Kelas
+                <select name="" id="">
+                    <option value="X-1">X-1</option>
+                    <option value="X-2">X-2</option>
+                    <option value="X-3">X-3</option>
+                    <option value="X-4">X-4</option>
+                    <option value="X-5">X-5</option>
+                    <option value="X-6">X-6</option>
+                    <option value="X-7">X-7</option>
+                    <option value="X-8">X-8</option>
+                    <option value="X-9">X-9</option>
+                    <option value="XI-1">XI-1</option>
+                    <option value="XI-2">XI-2</option>
+                    <option value="XI-3">XI-3</option>
+                    <option value="XI-4">XI-4</option>
+                    <option value="XI-5">XI-5</option>
+                    <option value="XI-6">XI-6</option>
+                    <option value="XI-7">XI-7</option>
+                    <option value="XI-8">XI-8</option>
+                    <option value="XI-9">XI-9</option>
+                    <option value="XII-1">XII-1</option>
+                    <option value="XII-2">XII-2</option>
+                    <option value="XII-3">XII-3</option>
+                    <option value="XII-4">XII-4</option>
+                    <option value="XII-5">XII-5</option>
+                    <option value="XII-6">XII-6</option>
+                    <option value="XII-7">XII-7</option>
+                    <option value="XII-8">XII-8</option>
+                </select>
+            </form>
+        </template>
+    </body>
+    <script>
+        function tambahOrangPenerima() {
+            var template = document.querySelector("#orang-penerima");
+            var clone = template.content.cloneNode(true);
+        }
+
+        function confirmPaket1() {
+            jumlahPaket1 = document.querySelector("#jumlah-paket-1");
+
+            for (let i = 0; i < jumlahPaket1.value; i++) {
+                console.log(i);
+            }
+        }
+    </script>
+</html>

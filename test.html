@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="tes">
+            Nama
+            <input type="text" />
+            Kelas
+            <input type="text" />
+        </div>
+        <label for="jumlah-paket-1"> Jumlah Paket 1</label>
+        <input type="number" min="0" max="40" value="0" id="jumlah-paket-1" /> <button onclick="confirmPaket1()">confirm</button>
+        <div class="paket-1-place"></div>
+        <template id="orang-penerima">
+            <h3 id="index-orang"></h3>
+            Nama
+            <input type="text" />
+            Kelas
+            <select name="" class="kelas-penerima">
+                <option value="X-1">X-1</option>
+                <option value="X-2">X-2</option>
+                <option value="X-3">X-3</option>
+                <option value="X-4">X-4</option>
+                <option value="X-5">X-5</option>
+                <option value="X-6">X-6</option>
+                <option value="X-7">X-7</option>
+                <option value="X-8">X-8</option>
+                <option value="X-9">X-9</option>
+                <option value="XI-1">XI-1</option>
+                <option value="XI-2">XI-2</option>
+                <option value="XI-3">XI-3</option>
+                <option value="XI-4">XI-4</option>
+                <option value="XI-5">XI-5</option>
+                <option value="XI-6">XI-6</option>
+                <option value="XI-7">XI-7</option>
+                <option value="XI-8">XI-8</option>
+                <option value="XI-9">XI-9</option>
+                <option value="XII-1">XII-1</option>
+                <option value="XII-2">XII-2</option>
+                <option value="XII-3">XII-3</option>
+                <option value="XII-4">XII-4</option>
+                <option value="XII-5">XII-5</option>
+                <option value="XII-6">XII-6</option>
+                <option value="XII-7">XII-7</option>
+                <option value="XII-8">XII-8</option>
+            </select>
+        </template>
+    </body>
+
+    <script>
+        var kelasNameEntry = {
+            "kelas-1-penerima-paket-1": "entry.1093330012",
+        };
+        var penerimaNumber = 0;
+        function confirmPaket1() {
+            var jumlahPaket1 = document.getElementById("jumlah-paket-1").value;
+            var template = document.querySelector("#orang-penerima");
+            for (let i = 0; i < jumlahPaket1; i++) {
+                var clone = template.content.cloneNode(true);
+
+                //clone.querySelector("#index-orang") = "Penerima " + (i+1)
+                document.querySelector(".paket-1-place").append(clone);
+            }
+        }
+    </script>
+</html>
